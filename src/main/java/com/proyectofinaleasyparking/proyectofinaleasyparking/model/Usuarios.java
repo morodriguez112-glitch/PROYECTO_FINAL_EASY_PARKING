@@ -46,6 +46,4 @@ public class Usuarios
     @NotBlank(message = "La contraseña es obligatorio")
     private String contrasena;
 
-
-
 }
