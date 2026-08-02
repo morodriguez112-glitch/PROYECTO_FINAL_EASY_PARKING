@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//colocamos un @RestController porque retorna archivos de tipo JSON
 @RestController
 @RequestMapping("/api/usuarios")
 public class UsuariosController

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <!--No olvidar que este metodo es para que la página de los usuarios se adapte al celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Usuarios</title>
+</head>
+<body>
+
+<!-- aca es, si el usuario no tiene id, el porque va a registrar un usuario, si ya tiene id se va a editar el usuario-->
+<h1 th:text="${usuarios.id_usuario == null} ? 'Registrar Usuario' : 'Editar Usuario'">
+    Formulario Usuario
+</h1>
+
+    <hr>
+    <form th:action="@{/view/usuarios/save}"
+          th:object="${usuarios}"
+          method="post">
+
+        <!--ESTE CAMPO ES OCULTAR EL ID, PORQUE SE AUTOINCREMENTA, NO OLVIDAR-->
+        <input type="hidden" th:field="*{id_usuario}">
+
+        <table>
+            <tr>
+                <td><label>Nombre:</label></td>
+                <td><input type="text" th:field="*{nombre}" required></td>
+            </tr>
+            <tr>
+                <td><label>Apellido:</label></td>
+                <td><input type="text" th:field="*{apellido}" required></td>
+            </tr>
+            <tr>
+                <td><label>Documento:</label></td>
+                <td><input type="text" th:field="*{documento}" required></td>
+            </tr>
+            <tr>
+                <td><label>Correo:</label></td>
+                <td><input type="text" th:field="*{correo}" required></td>
+            </tr>
+            <tr>
+                <td><label>Teléfono:</label></td>
+                <td><input type="text" th:field="*{telefono}" required></td>
+            </tr>
+
+            <!-- ESTE ES PARA HACER EL ROL VACIO, PORQUE LO TENEMOS COMO LLAVE FORANEA-->
+            <tr>
+                <td><label>Rol:</label></td>
+                <td>
+                    <input type="text" th:field="*{rol}" required>
+                </td>
+
+            </tr>
+            <tr>
+                <td><label>Placa:</label></td>
+                <td><input type="text" th:field="*{placa}" required></td>
+            </tr>
+            <tr>
+                <td><label>Contraseña:</label></td>
+                <td><input type="password" th:field="*{contrasena}">
+
+                    <span th:if="${usuarios.id_usuario != null}">
+                        (Dejar en blanco si no desea cambiar la contraseña que ya tiene)
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit">
+                        Guardar
+                    </button>
+                <a th:href="@{view/usuarios}">
+                    Volver a la Lista de Usuarios
+                </a>
+            </tr>
+        </table>
+    </form>
+    <a th:href="@{/usuarios}">Volver a la Lista de Usuarios</a>
+</body>
+</html>
+
