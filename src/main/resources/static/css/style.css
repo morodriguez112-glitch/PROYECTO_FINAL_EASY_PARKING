@@ -7,7 +7,7 @@ body {
     padding: 20px;
 }
 
-/* Contenedor principal estilo tarjeta doble (como el diseño que mostraste) */
+/* este es el cuadro principal, el estilo como de la tarjeta doble */
 .user-dashboard-container {
     display: flex;
     flex-wrap: wrap;
@@ -30,7 +30,7 @@ body {
 }
 
 .user-sidebar-panel h2 {
-    color: #1e4d2b; /* Tu verde elegante */
+    color: #1e4d2b; /* verde para el banner*/
     font-size: 1.5rem;
     margin-bottom: 15px;
 }
@@ -72,7 +72,7 @@ body {
 }
 
 .styled-table tr:hover {
-    background-color: #f1f5f9; /* Efecto sutil al pasar el mouse */
+    background-color: #f1f5f9; /* esta es para un diseño sutil para el mouse*/
 }
 
 .user-content-panel {
