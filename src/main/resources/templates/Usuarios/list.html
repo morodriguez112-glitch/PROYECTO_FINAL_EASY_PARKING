@@ -5,23 +5,40 @@
     <!-- No olvidar que este metodo es para que la página de los usuarios se adapte al celular -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Usuarios</title>
+
+    <!--el link del css siempre va a este momento antes de finalizar el head-->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
+<!-- cuadrito general que da forma de tarjeta doble -->
+<div class="user-dashboard-container">
+
+    <!-- lado izqu el cuadrito de títulos y las escripciones -->
+    <div class="user-sidebar-panel">
+        <h2>Gestión de Usuarios</h2>
+        <p>Easy parking, gestión de parqueaderos comuncales.</p>
+    </div>
+
+    <!-- Lado derecho del diseño de la tabla-->
+    <div class="user-content-panel">
+
     <h1>Lista de Usuarios</h1>
-    <table border="1">
+    <table class="styled-table">
         <thead>
-            <tr>
-                <th>ID Usuario</th>
-                <th>Apellido</th>
-                <th>Correo</th>
-                <th>Documento</th>
-                <th>Nombre</th>
-                <th>Placa</th>
-                <th>Rol</th>
-                <th>Telefono</th>
-                <th>Acciones</th>
-            </tr>
+        <tr>
+            <th>Acciones</th>
+            <th>ID Usuario</th>
+            <th>Apellido</th>
+            <th>Contraseña</th>
+            <th>Correo</th>
+            <th>Documento</th>
+            <th>Nombre</th>
+            <th>Placa</th>
+            <th>Rol</th>
+            <th>Telefono</th>
+        </tr>
         </thead>
+        <tbody>
 
         <!--ACA CORREMOS LA LISTA-->
 
@@ -58,5 +75,7 @@
     </table>
     <br/>
     <button><a th:href="@{/view/usuarios/formulario}">Agregar Nuevo Usuario</a></button>
+    </div>
+</div>
 </body>
 </html>

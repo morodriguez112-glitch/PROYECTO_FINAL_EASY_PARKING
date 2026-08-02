@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<link rel="stylesheet" th:href="@{/css/style.css}">
 <head>
     <meta charset="UTF-8">
     <!--No olvidar que este metodo es para que la página de los usuarios se adapte al celular -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Usuarios</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
+<!-- cuadrito general que da forma de tarjeta doble -->
+<div class="user-dashboard-container">
+    <div class="user-sidebar-panel">
+        <h2>Gestión de Usuarios</h2>
+        <p>Aquí puedes visualizar, administrar y controlar el acceso de todos los usuarios.</p>
+    </div>
+
+    <!-- Lado derecho del diseño de la tabla-->
+    <div class="user-content-panel">
 
 <!-- aca es, si el usuario no tiene id, el porque va a registrar un usuario, si ya tiene id se va a editar el usuario-->
 <h1 th:text="${usuarios.id_usuario == null} ? 'Registrar Usuario' : 'Editar Usuario'">
@@ -75,6 +86,8 @@
     </form>
     <br> <!-- recodar esto "salto de línea"-->
     <a th:href="@{/usuarios}">Volver a la Lista de Usuarios</a>
+    </div>
+</div>
 </body>
 </html>
 

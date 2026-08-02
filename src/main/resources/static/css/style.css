@@ -1,0 +1,84 @@
+/* Estructura general de la vista de usuarios */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Contenedor principal estilo tarjeta doble (como el diseño que mostraste) */
+.user-dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    max-width: 1100px;
+    margin: 40px auto;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+/* Panel izquierdo (donde esta el titulo y descripción) */
+.user-sidebar-panel {
+    flex: 0.3;
+    min-width: 160px;
+    padding: 20px;
+    background-color: #f9fbfb;
+    border-right: 1px solid #e2e8f0;
+}
+
+.user-sidebar-panel h2 {
+    color: #1e4d2b; /* Tu verde elegante */
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.user-sidebar-panel p {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* lado derecho donde esta la tabla de usuarios */
+.user-content-panel {
+    flex: 2;
+    min-width: 350px;
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+/* la tabla de usuarios dentro del panel */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.styled-table th {
+    background-color: #1e4d2b;
+    color: #ffffff;
+    padding: 12px;
+    font-weight: 600;
+}
+
+.styled-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+}
+
+.styled-table tr:hover {
+    background-color: #f1f5f9; /* Efecto sutil al pasar el mouse */
+}
+
+.user-content-panel {
+    overflow-x: auto;
+}
+
+.styled-table td, .styled-table th {
+    white-space: nowrap;
+}
