@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!-- No olvidar que este metodo es para que la página de los usuarios se adapte al celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Parqueadero</title>
+</head>
+<body>
+
+<h1>Lista de Parqueadero</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID Parqueadero</th>
+        <th>Numero</th>
+        <th>Tipo</th>
+        <th>Estado</th>
+        <th>Id_usuario</th>
+        <td>Acciones</td>
+    </tr>
+    </thead>
+
+    <!--ACA CORREMOS LA LISTA-->
+
+    <tr th:each="parqueadero : ${parqueaderos}"> <!-- ESTE ES EL MOTODO PARA CORRER-->
+
+        <td>
+            <!--PARA EDITAR-->
+            <a th:href="@{'/view/parqueadero/update/' + ${parqueadero.id_parqueadero}}">Editar</a>
+
+            <!-- PARA ELIMINAR-->
+
+            <form th:action="@{'/view/parqueadero/delete/' +${parqueadero.id_parqueadero}}" method="post">
+
+                <button type="submit">Eliminar</button>
+            </form>
+
+        </td>
+        <td th:text="${parqueadero.id_parqueadero}"></td>
+        <td th:text="${parqueadero.numero}"></td>
+        <td th:text="${parqueadero.tipo}"></td>
+        <td th:text="${parqueadero.estado}"></td>
+        <td th:text="${parqueadero.id_usuario}"></td>
+    </tr>
+</table>
+<br/>
+<button><a th:href="@{/view/usuarios/formulario}">Agregar Nuevo Parqueadero</a></button>
+</body>
+</html>

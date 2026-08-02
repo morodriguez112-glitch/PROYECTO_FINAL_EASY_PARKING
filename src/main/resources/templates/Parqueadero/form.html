@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Parqueadero</title>
+</head>
+<body>
+
+<!-- Recordar que aca es, si el parqueadero no tiene id, el porque va a registrar un usuario, si ya tiene id se va a editar el parqueadero-->
+<h1 th:text="${parqueadero.id_parqueadero == null} ? 'Registrar Parqueadero' : 'Editar Parqueadero'">
+    Formulario Parqueadero
+</h1>
+
+<!-- Recordemos que esta es la ruta para indicar, que es para guardar-->
+<hr/>
+<form th:action="@{/view/parqueadero/save}" th:object="${parqueadero}" method="post">
+
+    <!--EN ESTE CAMPO EL DE OCULTAR EL ID, PORQUE SE AUTOINCREMENTA, NO OLVIDAR-->
+    <input th:field="*{id_parqueadero}" type="hidden">
+    <table>
+        <tr>
+            <td><label>Numero:</label></td>
+            <td><input type="text" th:field="*{numero}" required></td>
+        </tr>
+
+            <tr>
+                <td><label>Tipo:</label></td>
+                <td><input type="text" th:field="*{tipo}" required></td>
+            </tr>
+
+        <tr>
+            <td><label>Estado:</label></td>
+            <td><input type="text" th:field="*{estado}" required></td>
+        </tr>
+
+        <!-- ESTE ES PARA HACER EL ID USUARIO VACIO, PORQUE LO TENGO COMO LLAVE FORANEA-->
+        <tr>
+            <td><label>id_usuario:</label></td>
+            <td>
+                <input type="text" th:field="*{id_usuario}" required>
+            </td>
+        </tr>
+    </table>
+<button type="submit">Guardar</button>
+</form>
+<br>
+<a th:href="@{/parqueadero}">Volver a la Lista de Parqueaderos</a>
+</body>
+</html>

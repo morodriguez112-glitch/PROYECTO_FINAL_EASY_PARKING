@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+//Colocamos un @RestController porque retorna archivos de tipo JSON
 @RestController
 @RequestMapping("/api/parqueaderos")
 public class ParqueaderoController

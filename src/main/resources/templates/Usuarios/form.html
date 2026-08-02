@@ -13,10 +13,9 @@
     Formulario Usuario
 </h1>
 
-    <hr>
-    <form th:action="@{/view/usuarios/save}"
-          th:object="${usuarios}"
-          method="post">
+<!-- aca le estoy diciendo la ruta para guardar-->
+<hr/> <!-- recordar que esto es una etiqueta para hacer una liniecita horizontal, para separar-->
+    <form th:action="@{/view/usuarios/save}" th:object="${usuarios}" method="post">
 
         <!--ESTE CAMPO ES OCULTAR EL ID, PORQUE SE AUTOINCREMENTA, NO OLVIDAR-->
         <input type="hidden" th:field="*{id_usuario}">
@@ -49,7 +48,6 @@
                 <td>
                     <input type="text" th:field="*{rol}" required>
                 </td>
-
             </tr>
             <tr>
                 <td><label>Placa:</label></td>
@@ -75,6 +73,7 @@
             </tr>
         </table>
     </form>
+    <br> <!-- recodar esto "salto de línea"-->
     <a th:href="@{/usuarios}">Volver a la Lista de Usuarios</a>
 </body>
 </html>

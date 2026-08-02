@@ -19,7 +19,7 @@ public class UsuariosView
     public String list(Model model)
     {
         model.addAttribute("usuarios", usuariosRepository.findAll());
-        return "usuarios/list";
+        return "Usuarios/list";
     }
 
     //Ruta para el formulario, recordemos que en este solo see registran o se editan los usuarios
@@ -28,7 +28,7 @@ public class UsuariosView
     public String form(Model model)
     {
         model.addAttribute("usuarios", new Usuarios());
-        return "usuarios/form";
+        return "Usuarios/form";
     }
 
     //el de eliminar, editar y guardar, son acciones que se realizan dentro de la oagina existente.
@@ -51,7 +51,7 @@ public class UsuariosView
     {
         Usuarios usuarios = usuariosRepository.findById(id).orElse(null);
         model.addAttribute("usuarios", usuarios);
-        return "usuarios/form";
+        return "Usuarios/form";
     }
 
     //ELIMINAR

@@ -22,11 +22,10 @@
                 <th>Acciones</th>
             </tr>
         </thead>
-        <tbody>
 
         <!--ACA CORREMOS LA LISTA-->
 
-        <tr th:each="usuario : ${usuarios}"> <!-- ESTE ES EL MOTODO-->
+        <tr th:each="usuario : ${usuarios}"> <!-- ESTE ES EL MOTODO PARA CORRER-->
 
                 <td>
                     <!--PARA EDITAR-->
@@ -51,7 +50,7 @@
                     <td th:text="${usuario.telefono}"></td>
             </tr>
 
-        <!-- ESTE ES PARA SI NO EXISTEN USUARIOS-->
+        <!-- ESTE ES PARA VALIDAR SI NO EXISTEN USUARIOS-->
         <tr th:if="${#lists.isEmpty(usuarios)}">
             <td colspan="9">No hay usuarios resgistrados.</td>
         </tr>
