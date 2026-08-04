@@ -5,21 +5,24 @@
     <!-- No olvidar que este metodo es para que la página de los usuarios se adapte al celular -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Parqueadero</title>
+    <!--el link del css siempre va a este momento antes de finalizar el head-->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
 
 <h1>Lista de Parqueadero</h1>
-<table border="1">
+<table class="styled-table"> <!--Si en algun momento quiero cambiar de colocar esta tabla, debo colocar styled-table styled-table-blue, ir al css que deje anotacion de como se hace la nueva clase pra agregar el color -->
     <thead>
     <tr>
+        <th>Acciones</th>
         <th>ID Parqueadero</th>
         <th>Numero</th>
         <th>Tipo</th>
         <th>Estado</th>
         <th>Id_usuario</th>
-        <td>Acciones</td>
     </tr>
     </thead>
+    <tbody>
 
     <!--ACA CORREMOS LA LISTA-->
 

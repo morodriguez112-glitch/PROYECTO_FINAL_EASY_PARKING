@@ -45,7 +45,15 @@
         <tr th:each="usuario : ${usuarios}"> <!-- ESTE ES EL MOTODO PARA CORRER-->
 
                 <td>
-                    <!--PARA EDITAR-->
+                    <!--PARA EDITAR
+                    RECOMENDACION PARA NO OLVIDAR
+                    No podemos usar el siguiente metodo porque <form method="post"> para Eliminar por seguridad y buenas prácticas
+                    para realizar una acción de cambio o borrado en la base de datos. Por ende usamos Usamos <a> para Editar porque
+                    solo nos redirige a una vista (GET) y no realiza ninguna acción de cambio en la base de datos
+                    <form th:href="@{'/view/usuarios/update/' + ${usuario.id_usuario}}" method="get">
+                    <button type="submit">Editar</button>
+                    </form> -->
+
                     <a th:href="@{'/view/usuarios/update/' + ${usuario.id_usuario}}">Editar</a>
 
                    <!-- PARA ELIMINAR-->

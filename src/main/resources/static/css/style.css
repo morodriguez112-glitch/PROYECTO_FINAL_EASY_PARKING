@@ -1,4 +1,4 @@
-/* Estructura general de la vista de usuarios */
+/* este es el estilo general de toda la pagina */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f7f6;
@@ -7,7 +7,7 @@ body {
     padding: 20px;
 }
 
-/* este es el cuadro principal, el estilo como de la tarjeta doble */
+/* este es el cuadro principal, como si fuera una tarjeta doble */
 .user-dashboard-container {
     display: flex;
     flex-wrap: wrap;
@@ -20,7 +20,7 @@ body {
     border: 1px solid #e2e8f0;
 }
 
-/* Panel izquierdo (donde esta el titulo y descripción) */
+/* este es el panel izquierdo, donde esta el titulo y la descripcion */
 .user-sidebar-panel {
     flex: 0.3;
     min-width: 160px;
@@ -29,27 +29,30 @@ body {
     border-right: 1px solid #e2e8f0;
 }
 
+/* este es el titulo que va dentro del panel izquierdo */
 .user-sidebar-panel h2 {
-    color: #1e4d2b; /* verde para el banner*/
+    color: #1e4d2b; /* verde para el banner */
     font-size: 1.5rem;
     margin-bottom: 15px;
 }
 
+/* esta es la descripcion chiquita que acompaña al titulo en el panel izquierdo */
 .user-sidebar-panel p {
     color: #64748b;
     font-size: 0.95rem;
     line-height: 1.5;
 }
 
-/* lado derecho donde esta la tabla de usuarios */
+/* este es el lado derecho donde esta la tabla de usuarios */
 .user-content-panel {
     flex: 2;
     min-width: 350px;
     padding: 40px;
     background-color: #ffffff;
+    overflow-x: auto;
 }
 
-/* la tabla de usuarios dentro del panel */
+/* esta es la tabla de usuarios dentro del panel */
 .styled-table {
     width: 100%;
     border-collapse: collapse;
@@ -58,6 +61,7 @@ body {
     font-size: 0.9rem;
 }
 
+/* esta es la cabecera o los titulos de la tabla de usuarios */
 .styled-table th {
     background-color: #1e4d2b;
     color: #ffffff;
@@ -65,20 +69,31 @@ body {
     font-weight: 600;
 }
 
+/* estas son las celdas donde va la informacion dentro de la tabla */
 .styled-table td {
     padding: 12px;
     border-bottom: 1px solid #e2e8f0;
     color: #334155;
 }
 
+/*
+  NOTA, asi es como se crea una una tabla alternativa de otro color, por si en algun momento deseo que otro formulario, lista o formato html, tenga otro color:
+  .styled-table-blue th {
+      background-color: #0284c7;
+      color: #ffffff;
+      padding: 12px;
+      font-weight: 600;
+  }
+*/
+
+
+/* esto es cuando pasamos el mouse por encima de una fila y se ve muy sutil */
 .styled-table tr:hover {
-    background-color: #f1f5f9; /* esta es para un diseño sutil para el mouse*/
+    background-color: #f1f5f9;
 }
 
-.user-content-panel {
-    overflow-x: auto;
-}
-
+/* esto evita que el texto de las celdas "se corran" por ejemplo que todo
+ se quede en una linea derechita */
 .styled-table td, .styled-table th {
     white-space: nowrap;
 }
