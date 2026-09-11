@@ -31,7 +31,7 @@ public class UsuariosView
         return "Usuarios/form";
     }
 
-    //el de eliminar, editar y guardar, son acciones que se realizan dentro de la oagina existente.
+    //el de eliminar, editar y guardar, son acciones que se realizan dentro de la pagina existente.
     //CREACION DE DATOS
 
     //GUARDAR
