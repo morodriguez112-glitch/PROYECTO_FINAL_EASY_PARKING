@@ -5,7 +5,11 @@
     <!-- No olvidar que este metodo es para que la página de los usuarios se adapte al celular -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Parqueadero</title>
-    <!--el link del css siempre va a este momento antes de finalizar el head-->
+
+    <!-- Esta línea conecta el framework de Tailwind CSS desde internet para poder usar sus diseños -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--el link del css siempre va a este momento antes de finalizar el head. Esta línea de acá es el css que uno hace a pie -->
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
