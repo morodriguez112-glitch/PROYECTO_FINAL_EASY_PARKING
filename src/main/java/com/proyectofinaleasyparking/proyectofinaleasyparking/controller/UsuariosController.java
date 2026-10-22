@@ -1,3 +1,16 @@
+// ¡RECORDATORIO SOBRE LOS PUERTOS! (NO CONFUNDIR):
+// * El puerto 3306 -> ES EXCLUSIVO DE LA BASE DE DATOS (MySQL). Se configura internamente.
+// * El puerto 8080 -> ES PARA ENTRAR A MI API / COMPU (http://localhost:8080/api/usuarios).
+// * El "8080" no se pone aquí en el Controller, se maneja en el archivo 'application.properties'.
+
+
+/*
+  CONTROLADOR:
+ *- Este archivo es el "puente" que conecta la base de datos con el HTML.
+  * Controla la ruta del "form" (para registrar y editar usuarios nuevos).
+  * Controla la ruta del "list" (para mandar la lista de usuarios al HTML).
+*/
+
 package com.proyectofinaleasyparking.proyectofinaleasyparking.controller;
 
 import com.proyectofinaleasyparking.proyectofinaleasyparking.model.Usuarios;
