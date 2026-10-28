@@ -23,8 +23,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
+
+//Colocamos un @RestController porque retorna archivos de tipo JSON y estoy creando la API,
+//este @restcontroller le pide a (la clase ParqueaderoController) los datos al ParqueaderoRepository.
+// El repositorio va a la base de datos de MySQL, busca los parqueaderos y se los devuelve al controlador.
+// Como la clase tiene la etiqueta @RestController, ese controlador empaqueta esos datos
+// de la base de datos en formato JSON ({"id": 1, "nombre": "Parqueadero 1"}) y los coloca en la ruta /api/parqueaderos
+
 //La API NO viene de afuera, la estoy creando YO desde aquí.
-//Colocamos un @RestController porque retorna archivos de tipo JSON
 @RestController
 // Colocamos un @RequestMapping para definir la ruta de la API
 // Al poner @RestController, significa que YO estoy creando una API y le digo a Java: "Este archivo va a traer datos en formato JSON no olvidar"
