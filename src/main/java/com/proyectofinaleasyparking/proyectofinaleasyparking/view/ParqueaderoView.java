@@ -1,3 +1,6 @@
+// Este es front end. Donde encuentro los (Archivos HTML y CSS como este).
+// Es lo que ve el usuario cuando entra a la aplicación.
+
 package com.proyectofinaleasyparking.proyectofinaleasyparking.view;
 
 import com.proyectofinaleasyparking.proyectofinaleasyparking.model.Parqueadero;
