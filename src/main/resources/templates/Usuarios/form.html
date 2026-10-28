@@ -6,7 +6,7 @@
   * Esto es parte del front end. Donde encuentro los (Archivos HTML y CSS como este).
   Es lo que ve el usuario cuando entra a la aplicación. -->
 
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
@@ -64,11 +64,21 @@
                 <td><input type="text" th:field="*{telefono}" required></td>
             </tr>
 
-            <!-- ESTE ES PARA HACER EL ROL VACIO, PORQUE LO TENEMOS COMO LLAVE FORANEA-->
+            <!-- ESTE ES PARA HACER EL ROL VACIO, PORQUE LO TENEMOS COMO LLAVE FORANEA
+
+                * <tr>: Significa "Table Row" (Fila de la tabla). Es la línea horizontal que organiza los elementos.
+                * <td>: Significa "Table Data" (Celda de la tabla). Es la cajita o columna donde metemos la información dentro de la fila.
+                * <select>: Es el menú desplegable que le muestra opciones al usuario para que elija una (evitando que escriba texto libre y rompa el sistema). -->
+
             <tr>
                 <td><label>Rol:</label></td>
                 <td>
-                    <input type="text" th:field="*{rol}" required>
+                    <select th:field="*{rol}" required>
+                        <option value="" disabled selected>Seleccione un rol</option>
+                        <option value="1">Propietario</option>
+                        <option value="2">Arrendatario</option>
+                        <option value="3">Visitante</option>
+                    </select>
                 </td>
             </tr>
             <tr>

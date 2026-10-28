@@ -58,6 +58,17 @@ public class UsuariosController
     @PutMapping("/{id}")
     public Usuarios update(@PathVariable Long id, @RequestBody Usuarios usuarios)
     {
+        // 1. Buscamos el usuario que ya existe en la base de datos por su ID
+        Usuarios usuarioExistente = usuariosRepository.findById(id).orElse(null);
+
+        // 2. Si el usuario dejó la contraseña en blanco o nula al editar
+        if (usuarios.getContrasena() == null || usuarios.getContrasena().isEmpty()) {
+            if (usuarioExistente != null) {
+                //le devolvemos la contraseña vieja que ya estaba guardada para que no se borre
+                usuarios.setContrasena(usuarioExistente.getContrasena());
+            }
+        }
+
         usuarios.setId_usuario(id);
         return usuariosRepository.save(usuarios);
     }
