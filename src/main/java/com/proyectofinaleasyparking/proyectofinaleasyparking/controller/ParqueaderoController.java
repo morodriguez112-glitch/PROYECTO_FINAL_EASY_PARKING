@@ -1,3 +1,6 @@
+// ESTO HACE PARTE DEL BACK-END. Vive en archivos .java (Controllers, Repositories, ect).
+// Es el cerebro que procesa los datos y habla con la base de datos.
+
 // ¡RECORDATORIO SOBRE LOS PUERTOS! (NO CONFUNDIR):
 // * El puerto 3306 -> ES EXCLUSIVO DE LA BASE DE DATOS (MySQL). Se configura internamente.
 // * El puerto 8080 -> ES PARA ENTRAR A MI API / COMPU (http://localhost:8080/api/parqueadero).
