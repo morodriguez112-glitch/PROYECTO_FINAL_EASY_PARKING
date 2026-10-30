@@ -28,6 +28,7 @@ import java.util.List;
 @RequestMapping("/api/usuarios")
 public class UsuariosController
 {
+
     @Autowired
     private UsuariosRepository usuariosRepository;
 
@@ -80,4 +81,7 @@ public class UsuariosController
     {
         usuariosRepository.deleteById(id);
     }
+
+
+
 }
