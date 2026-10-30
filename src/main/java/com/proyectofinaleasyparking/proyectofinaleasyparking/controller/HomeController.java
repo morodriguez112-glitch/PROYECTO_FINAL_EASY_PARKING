@@ -16,6 +16,8 @@ public class HomeController {
     // Recodar que el @getmapping es para pedir, traer o consultar información
     @GetMapping("/")
     public String mostrarHome() {
-        return "home"; //este return es para indicarle a Thymeleaf "Búscame un archivo en la carpeta templates que se llame exactamente home.html, agárralo y muéstraselo al usuario en la pantalla"
+        return "Home/home"; //este return es para indicarle a Thymeleaf "Búscame un archivo
+        // en la carpeta templates que se llame exactamente home.html, agárralo y muéstraselo al
+        // usuario en la pantalla" Aquí le indicamos: "Entra a la carpeta Home y busca el archivo home.html
     }
 }
