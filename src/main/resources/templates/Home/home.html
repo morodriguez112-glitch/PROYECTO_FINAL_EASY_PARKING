@@ -69,7 +69,7 @@
                     <div id="button" class="flex flex-col w-full my-5">
                         <button
                                 type="button"
-                                class="w-full py-4 bg-green-600 rounded-lg text-green-100"
+                                class="w-full py-4 font-medium text-white bg-green-600 hover:bg-green-500 rounded-lg border-green-500 hover:shadow inline-flex space-x-2 items-center justify-center"
                         >
                             <div class="flex flex-row items-center justify-center">
                                 <div class="mr-2">
@@ -92,13 +92,17 @@
                         </button>
                         <div class="flex justify-evenly mt-5">
                             <a
-                                    href="#"
-                                    class="w-full text-center font-medium text-indigo-600"
-                            >Recuperar Contraseña</a>
+                                    th:href="@{/recuperar}"
+                                    class="w-full text-center font-medium text-indigo-600">
+                                <!-- acá es donde conecto con el controller de /recuperar antes estaba "href="#"
+                            ahora lo paso a th:href="@{/recuperar}" para conectar el botón con esa pantalla -->
+
+                            Recuperar Contraseña</a>
+
                             <a
-                                    href="#"
-                                    class="w-full text-center font-medium text-indigo-600"
-                            >Registrarse</a>
+                                    th:href="@{/view/usuarios/formulario}"
+                                    class="w-full text-center font-medium text-indigo-600">
+                            Registrarse</a>
                         </div>
                     </div>
                 </form>
@@ -107,9 +111,21 @@
     </div>
 </div>
 <!-- recordar que este script de JavaScript va siempre al final, justo antes de cerrar el </body>,
-    para darle interactividad a la página después de que el HTML haya cargado por completo -->
+    para darle interactividad a la página después de que el HTML haya cargado por completo
+
+    RECORDATORIO!!!! El DOM es el esqueleto vivo que Chrome arma en su memoria cuando lee mi HTML, cuando doy F12 -->
+
 <script>
-    // Aquí agrego el código JavaScript
-</script> -->
+    // Paso 1: Agarro el botón verde (acá le digo al DOM "oye este es el botón que estoy voy a llamar"
+    const botondeIniciarSesion = document.querySelector('.bg-green-600');
+
+    // Paso 2: Acá es cuando el botón hace el 'click'
+    botondeIniciarSesion.addEventListener('click', () => {
+
+        // Paso 3: Aquí es cuando yo digo que "ejecución" deseo que haga cuando el usuario haga click en el botón
+        botondeIniciarSesion.disabled = true; // Esto bloquea el botón
+        botondeIniciarSesion.textContent = "Cargando..."; // Esto cambia el texto cuando el usuario hace click en dicho botón
+    });
+</script>
 </body>
 </html>

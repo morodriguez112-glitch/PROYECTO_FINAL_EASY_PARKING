@@ -26,14 +26,23 @@
 
                 <span>Recuperar Contraseña</span>
             </button>
-            <p class="text-center">¿Aún no tienes cuenta? <a href="#" class="text-indigo-600 font-medium inline-flex space-x-1 items-center"><span>Registrarse ahora </span><span><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <p class="text-center">¿Aún no tienes cuenta? <a th:href="@{/view/usuarios/formulario}" class="text-indigo-600 font-medium inline-flex space-x-1 items-center"><span>Registrarse ahora </span><span><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg></span></a></p>
         </div>
     </form>
 </div>
 <script>
-    // Aquí agrego el código JavaScript
+    // Paso 1: Agarro el botón verde (acá le digo al DOM "oye este es el botón que estoy voy a llamar"
+    const botondeRecuperar = document.querySelector('.bg-green-600');
+
+    // Paso 2: Acá es cuando el botón hace el 'click'
+    botondeRecuperar.addEventListener('click', () => {
+
+        // Paso 3: Aquí es cuando yo digo que "ejecución" deseo que haga cuando el usuario haga click en el botón
+        botondeRecuperar.disabled = true; // Esto bloquea el botón
+        botondeRecuperar.textContent = "Cargando..."; // Esto cambia el texto cuando el usuario hace click en dicho botón
+    });
 </script> -->
 </body>
 </html>
