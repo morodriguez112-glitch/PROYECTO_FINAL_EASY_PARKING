@@ -1,5 +1,7 @@
 //// ESTO HACE PARTE DEL BACK-END. Vive en archivos .java (Controllers, Repositories, ect).
-//// Es el cerebro que procesa los datos y habla con la base de datos.
+//// Acá en Usuarios.java o parqueadero.java es solo el molde que guardo  el dato (el Back-end),
+/// por eso el cliente nunca ve este archivo directamente; donde el cliente ve y elige las opciones en una lista desplegable que quiero
+/// es en tu archivo .html (el Front-end, dentro de mi carpeta templates).
 
 package com.proyectofinaleasyparking.proyectofinaleasyparking.model;
 
@@ -41,7 +43,8 @@ public class Usuarios
     @NotBlank(message = "El telefono es obligatorio")
     private String telefono;
 
-    private Long rol;
+    @NotBlank(message = "El rol es obligatorio")
+    private String rol;
 
     @NotBlank(message = "La placa es obligatoria")
     private String placa;
@@ -65,7 +68,7 @@ public class Usuarios
       Cuándo usarlo: Para textos o listas que requieren al menos un carácter o elemento.
 
    3. @NotBlank:
-      ¿Qué hace?: Es la más estricta para textos. Valida que no sea nulo,
+      ¿Qué hace?: Es para los textos. Valida que no sea nulo,
       que no esté vacío Y que no tenga solo espacios en blanco ("   ").
       Cuándo usarlo: Para campos de texto obligatorios como nombres,
       correos o contraseñas (cuando se están creando por primera vez).
