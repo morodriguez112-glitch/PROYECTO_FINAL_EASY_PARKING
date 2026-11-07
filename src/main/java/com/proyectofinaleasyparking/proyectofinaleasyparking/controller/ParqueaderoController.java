@@ -35,6 +35,8 @@ import java.util.List;
 @RestController
 // Colocamos un @RequestMapping para definir la ruta de la API
 // Al poner @RestController, significa que YO estoy creando una API y le digo a Java: "Este archivo va a traer datos en formato JSON no olvidar"
+//con ese @RestController estoy diciendo" Oye, este archivo va a ser una puerta de entrada (la entrada de la API)
+// para que el frontend me pida información"
 @RequestMapping("/api/parqueaderos") //Le dice al servidor que este archivo atiende todo lo que se busque en esta ruta
 public class ParqueaderoController
 {

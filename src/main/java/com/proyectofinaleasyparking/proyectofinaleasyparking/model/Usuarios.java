@@ -1,7 +1,8 @@
 //// ESTO HACE PARTE DEL BACK-END. Vive en archivos .java (Controllers, Repositories, ect).
-//// Acá en Usuarios.java o parqueadero.java es solo el molde que guardo  el dato (el Back-end),
-/// por eso el cliente nunca ve este archivo directamente; donde el cliente ve y elige las opciones en una lista desplegable que quiero
-/// es en tu archivo .html (el Front-end, dentro de mi carpeta templates).
+//// Acá en Usuarios.java o parqueadero.java Es la plantilla que dice cómo es un usuario
+/// que contiene nombre, contraseña, etc (el Backend), por eso el cliente nunca ve este archivo
+/// directamente; donde el cliente ve y elige las opciones en una lista desplegable que
+/// quiero es en mi archivo .html (el Frontend, dentro de mi carpeta templates).
 
 package com.proyectofinaleasyparking.proyectofinaleasyparking.model;
 

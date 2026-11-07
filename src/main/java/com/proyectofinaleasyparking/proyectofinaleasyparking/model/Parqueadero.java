@@ -1,5 +1,8 @@
 //// ESTO HACE PARTE DEL BACK-END. Vive en archivos .java (Controllers, Repositories, ect).
-//// Es el cerebro que procesa los datos y habla con la base de datos.
+//// Acá en Usuarios.java o parqueadero.java Es la plantilla que dice cómo es un usuario
+/// que contiene nombre, contraseña, etc (el Backend), por eso el cliente nunca ve este archivo
+/// directamente; donde el cliente ve y elige las opciones en una lista desplegable que
+/// quiero es en mi archivo .html (el Frontend, dentro de mi carpeta templates).
 
 package com.proyectofinaleasyparking.proyectofinaleasyparking.model;
 
