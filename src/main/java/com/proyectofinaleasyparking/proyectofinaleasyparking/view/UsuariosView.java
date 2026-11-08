@@ -1,5 +1,5 @@
-// Este es front end. Donde encuentro los (Archivos HTML y CSS como este).
-// Es lo que ve el usuario cuando entra a la aplicación.
+// Aquí el UsuariosView.Java actúa como el Controlador o un puente, que recibe las peticiones web,
+// habla con la base de datos y decide qué página HTML mostrarle al usuario.
 
 package com.proyectofinaleasyparking.proyectofinaleasyparking.view;
 
