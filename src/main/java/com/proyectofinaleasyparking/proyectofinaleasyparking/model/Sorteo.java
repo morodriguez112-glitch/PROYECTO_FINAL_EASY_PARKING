@@ -15,9 +15,8 @@ import jakarta.persistence.Id;
 @Table(name = "sorteo") //el nombre de la tabla
 @Getter // se crean los metodos automaticamente paara leer el dato
 @Setter // se crean los metodos automaticamente paara modificar el dato
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
+@NoArgsConstructor //Esta, crea un constructor vacio (osea una cajita)
+// ¿la necesito para acá? si, para mi sorteo, para que la base y spring creen los registros.
 public class Sorteo
 
 
